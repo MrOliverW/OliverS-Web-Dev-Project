@@ -101,3 +101,5 @@ Starting work on the event tracking now that the site is live, contact form and 
 
 Using Google Tag Manager
 
+I had to disable my popup blocker to see the Tag Manager conneciton
+
