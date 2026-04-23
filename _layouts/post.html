@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="cigar-review">
+    <header class="review-header">
+        <h1>{{ page.title }}</h1>
+        <div class="review-meta">
+            <span>Brand: {{ page.cigar_brand }}</span> | 
+            <span>Rating: <strong>{{ page.rating }}/100</strong></span> | 
+            <span>Date: {{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+    </header>
+
+    <div class="review-content">
+        {{ content }}
+    </div>
+
+    <footer class="smoking-warning">
+        <p><strong>SURGEON GENERAL WARNING:</strong> Cigar smoking can cause cancers of the mouth and throat, even if you do not inhale.</p>
+    </footer>
+</article>

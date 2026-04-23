@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy | Oliver Smokes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="hero">
+        <h1>Privacy Policy</h1>
+        <p>Last Updated: April 2026</p>
+    </div>
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h2>Data Collection</h2>
+        <p>We only collect your name and email address if you voluntarily submit them through our contact form. We do not sell or share this information with third parties.</p>
+        
+        <h2>Third Parties</h2>
+        <p>Our forms are processed by <strong>Formspree</strong> and our website is hosted via <strong>GitHub Pages</strong>. You can view their respective privacy policies on their websites.</p>
+        
+        <h2>Age Requirement</h2>
+        <p>This site is intended for individuals 21 years of age or older. We do not knowingly collect data from individuals under 21.</p>
+    </main>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem("age-verified")) {
+        let ageGate = confirm("Welcome to Oliver Smokes. You must be 21+ to enter. Are you over the age of 21?");
+        if (ageGate) {
+            localStorage.setItem("age-verified", "true");
+        } else {
+            window.location.href = "https://www.google.com"; // Redirect if they say no
+        }
+    }
+});
+</script>
+</body>
+</html>

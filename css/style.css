@@ -78,3 +78,22 @@ button {
 button:hover {
     background: #b8962d;
 }
+
+.legal-footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background: #000;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.warning-box {
+    border: 2px solid #d4af37; /* Gold accent */
+    color: #fff;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
