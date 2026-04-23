@@ -1,38 +1,30 @@
 ---
 layout: default
-title: Contact the Lounge
+title: Contact
 ---
 
-<section id="contact">
-    <div class="form-container">
-        <h1>Get in Touch</h1>
-        <p>Whether it's a review request or a business inquiry, the humidor is always open.</p>
+<div class="form-container" style="padding: 50px 20px; max-width: 600px; margin: 0 auto;">
+    <h1 style="color: #d4af37;">Send a Message</h1>
+    
+    <form action="https://formspree.io/f/PASTE_NEW_ID_HERE" method="POST">
+        
+        <input type="hidden" name="_next" value="https://oliversmokes.com/thanks.html">
+        <input type="hidden" name="_subject" value="URGENT: New Site Inquiry">
 
-        <form action="https://formspree.io/f/maqaawgb" method="POST">
-            <input type="hidden" name="_next" value="https://oliversmokes.com/thanks.html">
-            
-            <div class="input-group">
-                <label for="full-name">Name</label>
-                <input type="text" name="name" id="full-name" placeholder="Your Name" required>
-            </div>
+        <div style="margin-bottom: 20px;">
+            <label style="display:block; color: #bbb;">Your Email</label>
+            <input type="email" name="email" required style="width:100%; padding:10px; background:#111; border:1px solid #444; color:#fff;">
+        </div>
 
-            <div class="input-group">
-                <label for="email-address">Email Address</label>
-                <input type="email" name="_replyto" id="email-address" placeholder="email@example.com" required>
-            </div>
+        <div style="margin-bottom: 20px;">
+            <label style="display:block; color: #bbb;">Message</label>
+            <textarea name="message" required style="width:100%; padding:10px; background:#111; border:1px solid #444; color:#fff; height:150px;"></textarea>
+        </div>
 
-            <div class="input-group">
-                <label for="cigar">Cigar Brand/Blend</label>
-                <input type="text" name="cigar" id="cigar" placeholder="e.g. Arturo Fuente OpusX">
-            </div>
-
-            <div class="input-group">
-                <label for="message">Message</label>
-                <textarea rows="6" name="message" id="message" placeholder="Type your message here..." required></textarea>
-            </div>
-
-            <input type="text" name="_gotcha" style="display:none">
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </div>
-</section>
+        <button type="submit" style="background:#d4af37; color:#000; border:none; padding:15px; width:100%; font-weight:bold; cursor:pointer;">
+            SUBMIT TO LOUNGE
+        </button>
+        
+        <input type="text" name="_gotcha" style="display:none">
+    </form>
+</div>
