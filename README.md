@@ -17,7 +17,3 @@ Yes, Jekyll is natively integrated into GitHub Pages. If you moved these files t
 
 GitHub acts as your build server. It takes your "source code" (Markdown and Liquid), runs it through the Jekyll engine, and outputs a "distribution" version (pure HTML/CSS) that the browser can actually understand.
 
-I <3 Jekyll
-
-Yes! In Jekyll, the "connection" happens through Front Matter (those --- lines).
-

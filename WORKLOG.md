@@ -74,4 +74,8 @@ The URL Redirect: The second one (URL Redirect Record | @ | http://www.oliversmo
 To make the site professional and  sound, level up your architecture from "Basic HTML" to a Static Site System by using Jekyll. It’s built into GitHub, uses Markdown (which is perfect for writing reviews), and will automatically inject your writings into a template.
 
 
+_layouts/default.html (The Frame)
 
+index.html (The Content)
+
+_config.yml (The Brain)
