@@ -96,3 +96,8 @@ The moment you hit "Commit and Push," the watchman yells, "Hey, we have new code
 2. The Runner (The "Worker")
 GitHub doesn't run the code on your browser or their website servers. Instead, it spins up a Runner—which is essentially a fresh, temporary Virtual Machine (usually running Linux/Ubuntu) in the cloud.
 
+4/23/26 4pm:
+Starting work on the event tracking now that the site is live, contact form and navigation is working.
+
+Using Google Tag Manager
+
