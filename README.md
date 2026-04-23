@@ -1,4 +1,4 @@
-This is the README for the HipHopOeira Website Repository (this file should not be added to the Site Hosting platform).
+This is the README for the OliverS Website Repository (this file should not be added to the Site Hosting platform).
 
 
 Building in VS Code using HTML and CSS with the intention to add booking integration (via JavaScript).
