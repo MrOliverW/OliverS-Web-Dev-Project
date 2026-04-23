@@ -79,3 +79,8 @@ _layouts/default.html (The Frame)
 index.html (The Content)
 
 _config.yml (The Brain)
+
+
+Desiging the age gate:
+
+a Jekyll "layout" system, the "Bouncer" (the age gate) needs to live in your _layouts/default.html file. If it stays in your old index.html, it will only guard the front door and let people sneak in through the "side doors" (like the blog or contact pages).

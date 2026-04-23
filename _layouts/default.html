@@ -27,5 +27,26 @@
         <p>&copy; 2026 Oliver Smokes. <a href="/privacy">Privacy Policy</a></p>
     </footer>
 
+    <script>
+// The "Bouncer" Logic
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Check if the user has already shown their ID
+    const isVerified = localStorage.getItem("age-verified");
+
+    // 2. If they haven't been verified yet, ask the question
+    if (!isVerified) {
+        const userConfirmed = confirm("Welcome to Oliver Smokes. You must be 21+ to enter this site. Are you at least 21 years of age?");
+        
+        if (userConfirmed) {
+            // 3. If they say yes, remember them for next time
+            localStorage.setItem("age-verified", "true");
+        } else {
+            // 4. If they say no, send them to Google
+            window.location.href = "https://www.google.com";
+        }
+    }
+});
+</script>
+
     </body>
 </html>
