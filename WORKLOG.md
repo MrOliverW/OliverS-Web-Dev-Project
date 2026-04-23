@@ -84,3 +84,15 @@ _config.yml (The Brain)
 Desiging the age gate:
 
 a Jekyll "layout" system, the "Bouncer" (the age gate) needs to live in your _layouts/default.html file. If it stays in your old index.html, it will only guard the front door and let people sneak in through the "side doors" (like the blog or contact pages).
+
+
+GitHub Actions is the automated factory that sits between your "blueprints" (the code you push) and the "finished building" (the live website).
+Every workflow starts with an Event.
+
+GitHub’s "Watchman" constantly monitors your repository.
+
+The moment you hit "Commit and Push," the watchman yells, "Hey, we have new code! Start the factory!"
+
+2. The Runner (The "Worker")
+GitHub doesn't run the code on your browser or their website servers. Instead, it spins up a Runner—which is essentially a fresh, temporary Virtual Machine (usually running Linux/Ubuntu) in the cloud.
+
