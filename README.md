@@ -20,3 +20,4 @@ GitHub acts as your build server. It takes your "source code" (Markdown and Liqu
 I <3 Jekyll
 
 Yes! In Jekyll, the "connection" happens through Front Matter (those --- lines).
+
