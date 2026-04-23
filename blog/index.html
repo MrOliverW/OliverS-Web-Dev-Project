@@ -1,21 +1,14 @@
 ---
 layout: default
-title: The Humidor Archive
+title: Review Archive
 ---
-
-<section class="hero">
-    <h1>The Humidor Archive</h1>
-    <p>Honest reviews, straight from the horse's mouth.</p>
-</section>
 
 <ul class="review-list">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url | relative_url }}">
-        <strong>{{ post.title }}</strong> 
-        <span class="rating">— {{ post.rating }}/100</span>
-      </a>
-      <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
+  {% else %}
+    <li>No reviews found yet. Check the _posts folder!</li>
   {% endfor %}
 </ul>
