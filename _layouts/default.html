@@ -1,7 +1,31 @@
-<footer class="legal-footer">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Oliver Smokes</title>
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-    <div class="warning-box">
-        <strong>SURGEON GENERAL WARNING:</strong> Cigar smoking can cause cancers of the mouth and throat, even if you do not inhale. This site is intended for adults 21+ only.
-    </div>
-    <p>&copy; 2026 Oliver Smokes. <a href="/privacy">Privacy Policy</a></p>
-</footer>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog">Reviews</a>
+            <a href="/privacy">Privacy</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="legal-footer">
+        <div class="warning-box">
+            <strong>SURGEON GENERAL WARNING:</strong> Cigar smoking can cause cancers of the mouth and throat, even if you do not inhale. This site is intended for adults 21+ only.
+        </div>
+        <p>&copy; 2026 Oliver Smokes. <a href="/privacy">Privacy Policy</a></p>
+    </footer>
+
+    </body>
+</html>
