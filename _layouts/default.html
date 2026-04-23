@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5Q97KP5G');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Oliver Smokes</title>
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 </head>
 <body>
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q97KP5G"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <nav>
             <a href="/">Home</a>
             <a href="/blog">Reviews</a>
-            <a href="/contact">Contact</a> </nav>
+            <a href="/contact">Contact</a>
         </nav>
     </header>
 
@@ -22,52 +28,38 @@
 
     <footer class="legal-footer">
         <div class="warning-box">
-            <strong>SURGEON GENERAL WARNING:</strong> Cigar smoking can cause cancers of the mouth and throat, even if you do not inhale. This site is intended for adults 21+ only.
+            <strong>SURGEON GENERAL WARNING:</strong> Cigar smoking can cause cancers of the mouth and throat. This site is intended for adults 21+ only.
         </div>
         <p>&copy; 2026 Oliver Smokes. <a href="/privacy">Privacy Policy</a></p>
     </footer>
 
     <script>
-// The "Bouncer" Logic
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Check if the user has already shown their ID
-    const isVerified = localStorage.getItem("age-verified");
+    document.addEventListener("DOMContentLoaded", function() {
+        const isVerified = localStorage.getItem("age-verified");
 
-    // 2. If they haven't been verified yet, ask the question
-    if (!isVerified) {
-        const userConfirmed = confirm("Welcome to Oliver Smokes. You must be 21+ to enter this site. Are you at least 21 years of age?");
-        
-        if (userConfirmed) {
-            // 3. If they say yes, remember them for next time
-            localStorage.setItem("age-verified", "true");
-        } else {
-            // 4. If they say no, send them to Google
-            window.location.href = "https://www.google.com";
+        if (!isVerified) {
+            const userConfirmed = confirm("Welcome to Oliver Smokes. You must be 21+ to enter this site. Are you at least 21 years of age?");
+            
+            // Standard dataLayer push for GTM to listen to
+            window.dataLayer = window.dataLayer || [];
+
+            if (userConfirmed) {
+                localStorage.setItem("age-verified", "true");
+                // TRACKING: Successful age gate pass
+                window.dataLayer.push({
+                    'event': 'age_verification',
+                    'action': 'pass'
+                });
+            } else {
+                // TRACKING: Failed age gate
+                window.dataLayer.push({
+                    'event': 'age_verification',
+                    'action': 'fail'
+                });
+                window.location.href = "https://www.google.com";
+            }
         }
-    }
-});
-</script>
-
-<script>
-// The "Bouncer" Logic
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Check if the user has already shown their ID
-    const isVerified = localStorage.getItem("age-verified");
-
-    // 2. If they haven't been verified yet, ask the question
-    if (!isVerified) {
-        const userConfirmed = confirm("Welcome to Oliver Smokes. You must be 21+ to enter this site. Are you at least 21 years of age?");
-        
-        if (userConfirmed) {
-            // 3. If they say yes, remember them for next time
-            localStorage.setItem("age-verified", "true");
-        } else {
-            // 4. If they say no, send them to Google
-            window.location.href = "https://www.google.com";
-        }
-    }
-});
-</script>
-
-    </body>
+    });
+    </script>
+</body>
 </html>
