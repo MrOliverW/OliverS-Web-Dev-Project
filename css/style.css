@@ -135,3 +135,69 @@ button:hover {
     color: #888;
     margin-top: 5px;
 }
+
+#contact {
+    padding: 60px 20px;
+    background: #111; /* Slightly darker than the main bg */
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #222;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.form-container h2 {
+    color: #d4af37; /* Gold Accent */
+    margin-top: 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #bbb;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+.submit-btn {
+    background: #d4af37;
+    color: #111;
+    border: none;
+    padding: 15px 30px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #b8962d;
+}

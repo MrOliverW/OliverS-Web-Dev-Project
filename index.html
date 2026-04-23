@@ -9,10 +9,37 @@ title: Home
 </section>
 
 <section id="contact">
-    <h2>Get in Touch</h2>
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="What is your reason for getting in touch?"></textarea>
-        <button type="submit">Send Inquiry</button>
-    </form>
+    <div class="form-container">
+        <h2>Submit a Review Request</h2>
+        <p>Got a stick you think I should smoke? Drop the details below.</p>
+
+        <form action="https://formspree.io/f/mojypgye" method="POST">
+            <div class="input-group">
+                <label for="full-name">Name</label>
+                <input type="text" name="name" id="full-name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email-address">Email Address</label>
+                <input type="email" name="_replyto" id="email-address" placeholder="email@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="cigar">Cigar Brand/Blend</label>
+                <input type="text" name="cigar" id="cigar" placeholder="e.g. Padron 1964 Anniversary">
+            </div>
+
+            <div class="input-group">
+                <label for="message">Your Thoughts/Message</label>
+                <textarea rows="5" name="message" id="message" placeholder="Tell me what makes this stick special..." required></textarea>
+            </div>
+
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="submit-btn">Submit to the Lounge</button>
+
+            <input type="hidden" name="_next" value="https://oliversmokes.com/thanks.html">
+            
+        </form>
+    </div>
 </section>
