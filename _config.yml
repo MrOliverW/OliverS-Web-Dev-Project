@@ -5,3 +5,7 @@ url: "https://oliversmokes.com"
 markdown: kramdown
 future: true
 theme: minima 
+collections:
+  reviews:
+    output: true
+    permalink: /reviews/:path/

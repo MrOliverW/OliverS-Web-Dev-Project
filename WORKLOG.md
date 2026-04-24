@@ -109,3 +109,7 @@ matched the Google Tag Manager #-5Q97KP5G in both the Head (the JavaScript) and 
 
 Had to connect the website to Google Analytics (not just tag manager)
 
+
+6:20pm
+Now creating a search feature for the sitewith title (title, brand, wrapper, strength, rating, place, url, content...)
+created search.json

@@ -1,0 +1,16 @@
+---
+layout: none
+---
+[
+  {% for review in site.reviews %}
+  {
+    "title": {{ review.title | jsonify }},
+    "brand": {{ review.brand | jsonify }},
+    "strength": {{ review.strength | jsonify }},
+    "wrapper": {{ review.wrapper | jsonify }},
+    "place": {{ review.place_smoked | jsonify }},
+    "tags": {{ review.tags | join: ', ' | jsonify }},
+    "url": {{ review.url | relative_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
