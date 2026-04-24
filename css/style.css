@@ -201,3 +201,18 @@ button:hover {
 .submit-btn:hover {
     background: #b8962d;
 }
+
+.filter-bar input, .filter-bar select {
+    background-color: white;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.filter-bar input:focus {
+    outline: none;
+    border-color: #d35400;
+}
+
+.review-card:hover {
+    background-color: #fafafa;
+}

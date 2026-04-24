@@ -113,3 +113,12 @@ Had to connect the website to Google Analytics (not just tag manager)
 6:20pm
 Now creating a search feature for the sitewith title (title, brand, wrapper, strength, rating, place, url, content...)
 created search.json
+
+Upgrading reviews dashboard from pull (users must search) to push (info is immediately presented)
+
+Liquid Loop: Use Jekyll to print all your reviews by default.
+
+Dynamic Filters: Add dropdowns for Brand, Strength, and Wrapper.
+
+Logic Layer: Add a small script that hides/shows the reviews based on those dropdowns plus the text search.
+
