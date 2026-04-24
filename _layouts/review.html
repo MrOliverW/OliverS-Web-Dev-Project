@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<article class="magazine-review">
+  <header class="review-header">
+    <div class="kicker">{{ page.brand }}</div>
+    <h1>{{ page.title }}</h1>
+    <div class="meta-strip">
+      <span><strong>Smoked:</strong> {{ page.date_smoked }}</span>
+      <span><strong>Location:</strong> {{ page.place_smoked }}</span>
+    </div>
+  </header>
+
+  <section class="review-main">
+    <div class="review-content">
+      {{ content }}
+      
+      {% if page.pairs_with %}
+      <div class="pairing-box">
+        <h4>The Perfect Pairing</h4>
+        <p>{{ page.pairs_with }}</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <aside class="spec-sheet">
+      <div class="rating-circle">
+        <span class="score">{{ page.rating }}</span>
+        <span class="label">POINTS</span>
+      </div>
+      
+      <div class="spec-list">
+        <div class="spec-item"><strong>Strength:</strong> {{ page.strength }}</div>
+        <div class="spec-item"><strong>Wrapper:</strong> {{ page.wrapper }}</div>
+        <div class="spec-item"><strong>Shape:</strong> {{ page.shape }}</div>
+        <div class="spec-item"><strong>Origin:</strong> {{ page.origin }}</div>
+        {% if page.cost %}<div class="spec-item"><strong>MSRP:</strong> ${{ page.cost }}</div>{% endif %}
+      </div>
+
+      <div class="tag-cloud">
+        {% for tag in page.tags %}
+          <span class="tag">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </aside>
+  </section>
+</article>
+
+<style>
+  .magazine-review { max-width: 900px; margin: 40px auto; font-family: "Georgia", serif; line-height: 1.8; }
+  .review-header { border-bottom: 3px solid #000; padding-bottom: 20px; margin-bottom: 40px; }
+  .kicker { text-transform: uppercase; letter-spacing: 2px; color: #d35400; font-weight: bold; font-family: sans-serif; }
+  .review-header h1 { font-size: 3rem; margin: 10px 0; }
+  .meta-strip { font-family: sans-serif; font-size: 0.9rem; color: #666; display: flex; gap: 20px; }
+  
+  .review-main { display: grid; grid-template-columns: 1fr 300px; gap: 40px; }
+  .pairing-box { background: #fdf6e3; border-left: 5px solid #d35400; padding: 20px; margin-top: 30px; font-style: italic; }
+  
+  .spec-sheet { background: #f9f9f9; padding: 25px; border-radius: 4px; height: fit-content; border: 1px solid #eee; }
+  .rating-circle { text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+  .score { display: block; font-size: 3.5rem; font-weight: bold; color: #2c3e50; font-family: sans-serif; }
+  .spec-item { margin-bottom: 10px; font-size: 0.9rem; font-family: sans-serif; }
+  .tag { display: inline-block; background: #eee; padding: 2px 8px; margin: 3px; font-size: 0.8rem; border-radius: 3px; }
+
+  @media (max-width: 768px) { .review-main { grid-template-columns: 1fr; } }
+</style>
