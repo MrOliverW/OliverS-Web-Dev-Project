@@ -103,3 +103,9 @@ Using Google Tag Manager
 
 I had to disable my popup blocker to see the Tag Manager conneciton
 
+Can't use a "Thank You" page for tracking on a free formsspree plan so tracking clicks on the submit button instead.
+
+matched the Google Tag Manager #-5Q97KP5G in both the Head (the JavaScript) and the Body (the noscript fallback). This ensures that whether a user has a high-end setup or a locked-down browser, your "cameras" are still rolling.
+
+Had to connect the website to Google Analytics (not just tag manager)
+
